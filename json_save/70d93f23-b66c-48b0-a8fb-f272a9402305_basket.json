@@ -1,0 +1,252 @@
+{
+ "invoiceNumber": "252b6376-6110-4447-b68d-573abdc900ce",
+ "saleDateTime": "2024-06-05T15:18:55+02:00",
+ "saleTimetamp": "1718117619911",
+ "store": {
+  "id": "324213410",
+  "name": "Milnerton"
+ },
+ "clerk": {
+  "id": "10012",
+  "name": "Michael"
+ },
+ "terminalPoint": "8",
+ "basketItems": [
+  {
+   "id": "000000027",
+   "name": "Knorr Spaghetti Bolognaise Dry Cook In Sauce 48g",
+   "brand": "Knorr",
+   "category": "Food Cupboard",
+   "price": 19.99,
+   "quantity": 1
+  },
+  {
+   "id": "000000033",
+   "name": "PnP 2 Ply White Toilet Paper 18 Pack",
+   "brand": "PnP",
+   "category": "Cleaning",
+   "price": 134.99,
+   "quantity": 2
+  },
+  {
+   "id": "000000034",
+   "name": "Kellogg's Coco Pops Original 350g",
+   "brand": "Kellogg's",
+   "category": "Food Cupboard",
+   "price": 55.99,
+   "quantity": 2
+  },
+  {
+   "id": "000000016",
+   "name": "KFC Street Wise 2",
+   "brand": "KFC",
+   "category": "Food Cupboard",
+   "price": 20.99,
+   "quantity": 5
+  },
+  {
+   "id": "000000009",
+   "name": "Nescafe Salted Caramel 180g 10 Sachets",
+   "brand": "Nescafe",
+   "category": "Food Cupboard",
+   "price": 74,
+   "quantity": 2
+  },
+  {
+   "id": "000000021",
+   "name": "Stork Country 40% Fat Spread 1kg",
+   "brand": "Stork",
+   "category": "Food Cupboard",
+   "price": 46.99,
+   "quantity": 2
+  },
+  {
+   "id": "000000041",
+   "name": "Castle Lite NRB 24 x 330ml",
+   "brand": "Castle",
+   "category": "Beverage",
+   "price": 269.99,
+   "quantity": 4
+  }
+ ],
+ "nett": 1828.84,
+ "vat": 256.04,
+ "total": 2084.88
+},
+{
+ "invoiceNumber": "c1f1c59d-2ec7-4a54-8310-0693d49911f3",
+ "saleDateTime": "2024-06-05T15:18:55+02:00",
+ "saleTimetamp": "1718117619911",
+ "store": {
+  "id": "324213415",
+  "name": "Stellenbosch"
+ },
+ "clerk": {
+  "id": "10009",
+  "name": "Susan"
+ },
+ "terminalPoint": "7",
+ "basketItems": [
+  {
+   "id": "000000045",
+   "name": "HTH Floater + 1.6kg",
+   "brand": "HTH",
+   "category": "Pool Care",
+   "price": 179.99,
+   "quantity": 2
+  },
+  {
+   "id": "000000024",
+   "name": "Kellogg's All Bran Flakes 750g",
+   "brand": "Kellogg's",
+   "category": "Food Cupboard",
+   "price": 69.99,
+   "quantity": 3
+  },
+  {
+   "id": "000000034",
+   "name": "Kellogg's Coco Pops Original 350g",
+   "brand": "Kellogg's",
+   "category": "Food Cupboard",
+   "price": 55.99,
+   "quantity": 3
+  },
+  {
+   "id": "000000039",
+   "name": "Robertsons Chicken Spice Refill 84g",
+   "brand": "Robertsons",
+   "category": "Food Cupboard",
+   "price": 19.99,
+   "quantity": 2
+  },
+  {
+   "id": "000000041",
+   "name": "Castle Lite NRB 24 x 330ml",
+   "brand": "Castle",
+   "category": "Beverage",
+   "price": 269.99,
+   "quantity": 1
+  },
+  {
+   "id": "000000015",
+   "name": "Pepsi Cola Soft Drink 2L",
+   "brand": "Pepsi Cola",
+   "category": "Beverage",
+   "price": 19.75,
+   "quantity": 4
+  },
+  {
+   "id": "000000038",
+   "name": "PnP Full Cream Fresh Milk 2L",
+   "brand": "PnP",
+   "category": "Food Cupboard",
+   "price": 34.99,
+   "quantity": 5
+  }
+ ],
+ "nett": 1301.84,
+ "vat": 182.26,
+ "total": 1484.1
+},
+{
+ "invoiceNumber": "acaec143-82c7-4bf5-822c-00a923b9f556",
+ "saleDateTime": "2024-06-05T15:18:55+02:00",
+ "saleTimetamp": "1718117619911",
+ "store": {
+  "id": "324213442",
+  "name": "Meyerton"
+ },
+ "clerk": {
+  "id": "10010",
+  "name": "Claudia"
+ },
+ "terminalPoint": "3",
+ "basketItems": [
+  {
+   "id": "000000018",
+   "name": "McD Big Mac",
+   "brand": "McD",
+   "category": "Food Cupboard",
+   "price": 5.49,
+   "quantity": 2
+  },
+  {
+   "id": "000000010",
+   "name": "Nespresso Black",
+   "brand": "Nesspresso",
+   "category": "Coffee",
+   "price": 1.33,
+   "quantity": 2
+  },
+  {
+   "id": "000000002",
+   "name": "Dove Soap Fresh Touch 90g",
+   "brand": "Dove",
+   "category": "Personal Health Care",
+   "price": 24.99,
+   "quantity": 3
+  },
+  {
+   "id": "000000035",
+   "name": "Nestle KitKat 4 Finger Milk Chocolate Bar 41.5g",
+   "brand": "Nestle",
+   "category": "Food Cupboard",
+   "price": 13.99,
+   "quantity": 1
+  }
+ ],
+ "nett": 102.6,
+ "vat": 14.36,
+ "total": 116.96
+},
+{
+ "invoiceNumber": "741be8f5-7a04-4185-a302-c43b6a410153",
+ "saleDateTime": "2024-06-05T15:18:55+02:00",
+ "saleTimetamp": "1718117619911",
+ "store": {
+  "id": "224213412",
+  "name": "Durbanville"
+ },
+ "clerk": {
+  "id": "10013",
+  "name": "Mohammed"
+ },
+ "terminalPoint": "5",
+ "basketItems": [
+  {
+   "id": "000000014",
+   "name": "Coca-Cola Soft Drink 1.5L",
+   "brand": "Coka Coke",
+   "category": "Beverage",
+   "price": 18.49,
+   "quantity": 1
+  },
+  {
+   "id": "000000044",
+   "name": "Dettol Soap Active 175g",
+   "brand": "Dettol",
+   "category": "Personal Health Care",
+   "price": 17.99,
+   "quantity": 4
+  },
+  {
+   "id": "000000015",
+   "name": "Pepsi Cola Soft Drink 2L",
+   "brand": "Pepsi Cola",
+   "category": "Beverage",
+   "price": 19.75,
+   "quantity": 5
+  },
+  {
+   "id": "000000008",
+   "name": "Nescafe Espresso Jar 200g",
+   "brand": "Nescafe",
+   "category": "Food Cupboard",
+   "price": 174,
+   "quantity": 3
+  }
+ ],
+ "nett": 711.2,
+ "vat": 99.57,
+ "total": 810.77
+},

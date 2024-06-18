@@ -1,0 +1,100 @@
+
+-- Installing connector plugin into containerised CP Kafka
+https://www.youtube.com/watch?v=18gDPSOH3wU
+
+-- after adding.modifying Dockerfile - adding a plugin, redeploy using below.
+-- docker compose up -d --build
+
+-- List plugins installed 
+curl -s localhost:8083/connector-plugins |jq '.[].class'
+
+-- List connectors created
+curl -X GET http://localhost:8083/connectors
+
+-- List connector status
+curl -s "http://mbp.local:8083/connectors?expand=info&expand=status" | \
+       jq '. | to_entries[] | [ .value.info.type, .key, .value.status.connector.state,.value.status.tasks[].state,.value.info.config."connector.class"]|join(":|:")' | \
+       column -s : -t| sed 's/\"//g'| sort
+
+
+------------------------------------------------------------------------------
+-- Post/Sink to Local Mongo container
+
+  curl -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+      {"name": "mongo-local-creator-baskets-sink",
+        "config": {
+          "connector.class":"com.mongodb.kafka.connect.MongoSinkConnector",
+          "connection.uri":"mongodb://mbp.local:27017/?directConnection=true",
+          "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+          "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+          "value.converter.schemas.enable": false,
+          "database":"MongoCom0",
+          "collection":"salesbaskets",
+          "topics":"salesbaskets"
+          }
+      }
+      ' \
+  http://localhost:8083/connectors -w "\n"
+
+
+  curl -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+      {"name": "mongo-local-creator-payments-sink",
+        "config": {
+          "connector.class":"com.mongodb.kafka.connect.MongoSinkConnector",
+          "connection.uri":"mongodb://mbp.local:27017/?directConnection=true",
+          "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+          "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+          "value.converter.schemas.enable": false,
+          "database":"MongoCom0",
+          "collection":"salespayments",
+          "topics":"salespayments"
+          }
+      }
+      ' \
+  http://localhost:8083/connectors -w "\n"
+
+
+------------------------------------------------------------------------------
+
+-- Post/Sink to Atlas
+
+curl -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+     { "name": "mongo-cloud-creator-baskets-sink",
+        "config": {
+          "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+          "connection.uri": "mongodb+srv://adminuser:BUJuCZnmugQgO85g@cluster0.gqtnee9.mongodb.net",
+          "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+          "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+          "value.converter.schemas.enable": false,
+          "database": "MongoCom0",
+          "collection": "salesbaskets",
+          "topics": "salesbaskets"
+        }
+      } 
+      ' \
+  http://localhost:8083/connectors -w "\n"
+
+  
+  curl -X POST \
+  -H "Content-Type: application/json" \
+  --data '
+     { "name": "mongo-cloud-creator-payments-sink",
+        "config": {
+          "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+          "connection.uri": "mongodb+srv://adminuser:BUJuCZnmugQgO85g@cluster0.gqtnee9.mongodb.net",
+          "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+          "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+          "value.converter.schemas.enable": false,
+          "database": "MongoCom0",
+          "collection": "salespayments",
+          "topics": "salespayments"
+        }
+      } 
+      ' \
+  http://localhost:8083/connectors -w "\n"
